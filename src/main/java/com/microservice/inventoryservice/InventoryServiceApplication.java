@@ -43,8 +43,16 @@ public class InventoryServiceApplication {
 			inventory1.setInsertTime(new Date());
 			inventory1.setUpdateTime(new Date());
 
+			Inventory inventory2 = new Inventory();
+			inventory2.setSkuCode("SKUCODE-III");
+			inventory2.setQuantity(59);
+			inventory2.setStatus(Constants.ACTIVE_STATUS);
+			inventory2.setInsertTime(new Date());
+			inventory2.setUpdateTime(new Date());
+
 			inventoryRepository.save(inventory);
 			inventoryRepository.save(inventory1);
+			inventoryRepository.save(inventory2);
 		};
 	}
 
